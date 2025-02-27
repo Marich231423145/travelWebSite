@@ -1,0 +1,608 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>travel agency website </title>
+	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/
+	all.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/repertuar/repertuar.css" />
+	<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<header>
+
+	<div id="menu-bar" class="fas fa-bars"></div>
+
+	<h2 class="greetings">Hello, <span class="username">user</span>!</h2>
+	
+	<nav class="navbar">
+		<a href="#home">home</a>
+		<a href="#book">book</a>
+		<a href="#packages">packages</a>
+		<a href="#services">services</a>
+		<a href="#gallery">gallery</a>
+		<a href="#review">review</a>
+		<a href="#contact">contact</a>
+		<a id="admin" href="#">Admin panel</a>
+	</nav>
+
+	<div class="icons">
+		<i class="fas fa-user" id="login-btn"></i>
+	</div>	
+	
+
+</header>
+
+<div class="login-form-container">
+
+
+	<!-- Форма авторизации -->
+	<form class="auth-form">
+
+		<!-- Поля вода -->
+		<!-- Логин -->
+		<div class="auth-form__control auth-form__control_required">
+			<label for="login">Login</label>
+			<input type="text" id="login" placeholder="Username" />
+		</div>
+		<!-- Пароль -->
+		<div class="auth-form__control auth-form__control_required">
+			<label for="password">Password</label>
+			<input type="password" id="password" placeholder="****" />
+		</div>
+
+		<!-- Кнопка входа -->
+		<button type="button" class="auth-form__btn auth-form__btn_signin">Sign in</button>
+		<!-- Кнопка Регистрации -->
+		<button type="button" class="auth-form__btn auth-form__btn_signup">Sign up</button>
+	</form>
+	<i class="fas fa-times" id="form-close"></i>
+	
+	
+</div>
+
+<section class="home" id="home">
+
+	<div class="content">
+		<h3>adventure is worthwile</h3>
+		<p>discover new places with us, adventure awaits</p>
+		<a href="https://www.novo-monde.com/en/travel-around-world/" class="btn">discover more</a>
+
+	<div class="controls">
+		<span class="vid-btn active" data-src="images/vid-1.mp4"></span>
+		<span class="vid-btn" data-src="images/vid-2.mp4"></span>
+		<span class="vid-btn" data-src="images/vid-3.mp4"></span>
+		<span class="vid-btn" data-src="images/vid-4.mp4"></span>
+		<span class="vid-btn" data-src="images/vid-5.mp4"></span>
+	</div>
+
+	<div class="video-container">
+		<video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+	</div>
+</section>
+
+<section class="book" id="book">
+	
+	<h1 class="heading">
+		<span>b</span>	
+		<span>o</span>
+		<span>o</span>
+		<span>k</span>
+		<span class="space"></span>
+		<span>n</span>
+		<span>o</span>
+		<span>w</span>
+	</h1>
+ 
+	<div class="row">
+		
+		<div class="image">
+			<img src="images/book-img.jpg" alt="">
+		</div>
+
+		<form action="">
+			<div class="inputBox">
+				<h3>where to</h3>
+				<input type="text" placeholder="place name">
+			</div>
+			<div class="inputBox">
+				<h3>how many</h3>
+				<input type="number" placeholder="number of guests">
+			</div>
+			<div class="inputBox">
+				<h3>arrivals</h3>
+				<input type="date">
+			</div>
+			<div class="inputBox">
+				<h3>leaving</h3>
+				<input type="date">
+			</div>
+			<a href="booking-form.html" class="btn">book now</a>
+		</form>
+
+	</div>
+</section>
+
+
+<section class="packages" id="packages">
+
+		<h1 class="heading">
+		<span>p</span>	
+		<span>a</span>
+		<span>c</span>
+		<span>k</span>
+		<span>a</span>
+		<span>g</span>
+		<span>e</span>
+		<span>s</span>
+	</h1>
+	<main>
+		<div class="advantages__container">
+			<!-- Поиск/Создание страны -->
+			<div class="repertuar-controls">
+				<input type="text" placeholder="Search on title or direction..." title="Input your order" />
+				<button>Add country</button>
+			</div>
+
+			<form class="create-show" style="display: none">
+				<!-- Заголовок -->
+				<h3 class="create-show__title">Input data for new country</h3>
+
+				<!-- Поля вода -->
+
+				<!-- Название -->
+				<div class="create-show__control create-show__control_required">
+					<label for="title">NAME</label>
+					<input type="text" id="title" placeholder="Paris" />
+				</div>
+
+				<!-- Описание -->
+				<div class="create-show__control create-show__control_required">
+					<label for="description">Description</label>
+					<textarea
+						id="description"
+						rows="3"
+						placeholder="Your best trip."
+					></textarea>
+				</div>
+
+				<!-- Цена за билет-->
+				<div class="create-show__control create-show__control_required">
+					<label for="price">Ticket calculate($)</label>
+					<input type="number" id="price" placeholder="500" />
+				</div>
+
+				<!-- фотография -->
+				<div class="create-show__control create-show__control_required">
+					<label for="imgSrc">Photo</label>
+					<input type="file" id="imgSrc" name="imgSrc" accept="image/png, image/jpeg" />
+				</div>
+
+				<!-- Превью (необязательно) -->
+				<div class="create-show__control">
+					<label for="previewImgSrc">Preview</label>
+					<input type="file" id="previewImgSrc" name="previewImgSrc" accept="image/png, image/jpeg" />
+				</div>
+
+				<!-- Направление-->
+				<div class="create-show__control">
+					<label for="direction">Direction</label>
+					<div class="create-show__tag-inputs">
+						<div class="create-show__tag-input">
+							<input type="text" id="direction" placeholder="West" />
+							<button type="button">+</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Кнопка создания -->
+				<button type="button" class="create-show__create-btn">Make</button>
+			</form>
+
+			<!-- Карточки спектаклей -->
+			<div class="advantages shows"></div>
+		</div>
+
+</main>
+	<!----<div class="box-container">
+	
+		<div class="box">
+			<img src="images/4.png" alt="">
+			<div class="content">
+				<h3><i class="fas fa-map-market-alt"></i>mumbai</h3>
+				<p>The best place for spending your holiday</p>
+				<div class="starts">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+				<div class="price">$90.00 <span>$120.00</span></div>
+				<a href="booking-form.html" class="btn">book now</a>
+
+			</div>
+	</div>
+
+	<div class="box">
+			<img src="images/5.png" alt="">
+			<div class="content">
+				<h3><i class="fas fa-map-market-alt"></i>sydney</h3>
+				<p>The best place for spending your holiday</p>
+				<div class="starts">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+				<div class="price">$90.00 <span>$120.00</span></div>
+				<a href="booking-form.html" class="btn">book now</a>
+
+			</div>
+	</div> 
+	<div class="box">
+			<img src="images/6.png" alt="">
+			<div class="content">
+				<h3><i class="fas fa-map-market-alt"></i>hawaii</h3>
+				<p>The best place for spending your holiday</p>
+				<div class="starts">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+				<div class="price">$90.00 <span>$120.00</span></div>
+				<a href="booking-form.html" class="btn">book now</a>
+
+			</div>
+	</div>
+	<div class="box">
+			<img src="images/1.png" alt="">
+			<div class="content">
+				<h3><i class="fas fa-map-market-alt"></i>paris</h3>
+				<p>The best place for spending your holiday</p>
+				<div class="starts">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+				<div class="price">$90.00 <span>$120.00</span></div>
+				<a href="booking-form.html" class="btn">book now</a>
+
+			</div>
+	</div>
+	<div class="box">
+			<img src="images/3.png" alt="">
+			<div class="content">
+				<h3><i class="fas fa-map-market-alt"></i>tokyo</h3>
+				<p>The best place for spending your holiday</p>
+				<div class="starts">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+				<div class="price">$90.00 <span>$120.00</span></div>
+				<a href="booking-form.html" class="btn">book now</a>
+
+			</div>
+	</div>
+	<div class="box">
+			<img src="images/2.png" alt="">
+			<div class="content">
+				<h3><i class="fas fa-map-market-alt"></i>egypt</h3>
+				<p>The best place for spending your holiday</p>
+				<div class="starts">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+				<div class="price">$90.00 <span>$120.00</span></div>
+				<a href="booking-form.html" class="btn">book now</a>
+
+			</div>
+	</div>
+</section>-->
+<section class="services" id="services">
+
+	<h1 class="heading">
+		<span>s</span>	
+		<span>e</span>
+		<span>r</span>
+		<span>v</span>
+		<span>i</span>
+		<span>c</span>
+		<span>e</span>
+		<span>s</span>
+	</h1>
+	
+	<div class="box-container">
+	
+		<div class="box">
+			<i class="fas fa-hotel"></i>
+			<h3>affordable hotels</h3>
+			<p>The best hotels for you</p>
+		</div>
+		<div class="box">
+			<i class="fas fa-utensils"></i>
+			<h3>food and drinks</h3>
+			<p>The best food for you</p>
+		</div>
+		<div class="box">
+			<i class="fas fa-bullhorn"></i>
+			<h3>safety guide</h3>
+			<p>This guide is for you</p>
+		</div>
+		<div class="box">
+			<i class="fas fa-globe-asia"></i>
+			<h3>around the world</h3>
+			<p>This guide is for you</p>
+		</div>
+		<div class="box">
+			<i class="fas fa-plane"></i>
+			<h3>fastest travel</h3>
+			<p>This guide is for you</p>
+		</div>
+		<div class="box">
+			<i class="fas fa-hiking"></i>
+			<h3>adventures</h3>
+			<p>This guide is for you</p>
+		</div>
+
+
+	</div>
+
+</section>
+<section class="gallery" id="gallery">
+
+	<h1 class="heading">
+		<span>g</span>	
+		<span>a</span>
+		<span>l</span>
+		<span>l</span>
+		<span>e</span>
+		<span>r</span>
+		<span>y</span>
+	</h1>
+	<div class="box-container">
+		
+		<div class="box">
+			<img src="images/g-1.jpg" alt="">
+			<div class="content">
+				<h3>amazing places</h3>
+				<p>Photos from our users</p>
+				
+			</div>
+		</div>
+		<div class="box">
+			<img src="images/g-2.jpg" alt="">
+			<div class="content">
+				<h3>amazing places</h3>
+				<p>Photos from our users</p>
+				
+			</div>
+		</div>
+		<div class="box">
+			<img src="images/g-3.jpg" alt="">
+			<div class="content">
+				<h3>amazing places</h3>
+				<p>Photos from our users</p>
+				
+			</div>
+		</div>
+		<div class="box">
+			<img src="images/g-4.jpg" alt="">
+			<div class="content">
+				<h3>amazing places</h3>
+				<p>Photos from our users</p>
+				
+			</div>
+		</div>
+		<div class="box">
+			<img src="images/g-5.jpg" alt="">
+			<div class="content">
+				<h3>amazing places</h3>
+				<p>Photos from our users</p>
+				
+			</div>
+		</div>
+		<div class="box">
+			<img src="images/g-6.jpg" alt="">
+			<div class="content">
+				<h3>amazing places</h3>
+				<p>Photos from our users</p>
+				
+			</div>
+		</div>
+		<div class="box">
+			<img src="images/g-7.jpg" alt="">
+			<div class="content">
+				<h3>amazing places</h3>
+				<p>Photos from our users</p>
+				
+			</div>
+		</div>
+		<div class="box">
+			<img src="images/g-8.jpg" alt="">
+			<div class="content">
+				<h3>amazing places</h3>
+				<p>Photos from our users</p>
+			
+			</div>
+		</div>  
+	</div>
+</section>
+
+<section class="review" id="review">
+	
+	<h1 class="heading">
+		<span>r</span>	
+		<span>e</span>
+		<span>v</span>
+		<span>i</span>
+		<span>e</span>
+		<span>w</span>
+	</h1>
+
+	<div class="swiper-container review-slider">
+		
+		<div class="swiper-wrapper">
+
+			<div class="swiper-slide">
+			<div class="box">
+				<img src="images/pic1.png" alt="">
+				<h3>Yana Fast</h3>
+				<p>That was the best trip in my life!</p>
+				<div class="stars">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+			</div>
+		</div>
+	
+		<div class="swiper-slide">
+			<div class="box">
+				<img src="images/pic2.png" alt="">
+				<h3>Amir Akhatov</h3>
+				<p>That was the best trip in my life!</p>
+				<div class="stars">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+			</div>
+		</div>
+		
+		<div class="swiper-slide">
+			<div class="box">
+				<img src="images/pic3.png" alt="">
+				<h3>Anna Shushurina</h3>
+				<p>That was the best trip in my life!</p>
+				<div class="stars">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+			</div>
+		</div>
+		
+		<div class="swiper-slide">
+			<div class="box">
+				<img src="images/pic4.png" alt="">
+				<h3>Veronika Filyasova</h3>
+				<p>That was the best trip in my life!</p>
+				<div class="stars">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="contact" id="contact">
+
+	<h1 class="heading">
+		<span>c</span>	
+		<span>o</span>
+		<span>n</span>
+		<span>t</span>
+		<span>a</span>
+		<span>c</span>
+		<span>t</span>
+	</h1>
+	
+	<div class="row">
+		
+		<div class="image">
+			<img src="images/pic5.png" alt="">
+		</div>
+		
+		<form action="">
+			<div class="inputBox">
+				<input type="text" placeholder="name">
+				<input type="email" placeholder="email">
+			</div>
+			<div class="inputBox">
+				<input type="number" placeholder="number">
+				<input type="text" placeholder="subject">
+			</div>
+			<textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+			<input type="submit" class="btn" value="send message">
+		</form>
+	</div>
+</section>
+<section class="footer">
+
+	<div class="box-containter">
+
+		<div class="box">
+			<h3>about us</h3>
+			<p>The best travel company</p>
+		</div>
+		<div class="box">
+			<h3>branch locations</h3>
+			<a href="#">india</a>
+			<a href="#">USA</a>
+			<a href="#">japan</a>
+			<a href="#">russia</a>
+		</div>
+		<div class="box">
+			<h3>quick links</h3>
+			<a href="#home">home</a>
+			<a href="#book">book</a>
+			<a href="#packages">packages</a>
+			<a href="#services">services</a>
+			<a href="#gallery">gallery</a>
+			<a href="#review">review</a>
+			<a href="#contact">contact</a>
+		</div>
+		<div class="box">
+			<h3>follow us</h3>
+			<a href="#">facebook</a>
+			<a href="#">instagram</a>
+			<a href="#">twitter</a>
+			<a href="#">telegram</a>
+			<a href="#">vkontakte</a>
+		</div>
+		
+	</div>
+</section>
+
+    <script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+    <script defer type="module" src="./js/repertuar/repertuar.js"></script>
+	<script defer type="module" src="./js/repertuar/createForm.js"></script>
+	<script src="<http://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+	<script defer type="module" src="./js/setupAuth.js"></script>
+	<script defer type="module" src="./js/auth.js"></script>
+	<script defer type="module" src="./js/show.js"></script>
+</body>
+</html> 
