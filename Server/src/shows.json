@@ -1,0 +1,63 @@
+[
+    {
+        "title": "Paris",
+        "description": "The best Europian city to visit it with your friends and future wife",
+        "direction": ["West"],
+
+        "imgSrc": "1.png",
+        "previewImgSrc": "preview1.png",
+
+        "price": "500"
+    },
+    {
+        "title": "Egypt",
+        "description": "It's the dream of your childhood. You can see there the famous Pyramids and Sphinks",
+        "direction": ["SouthWest"],
+
+        "previewImgSrc": "preview2.png",
+        "imgSrc": "2.png",
+
+        "price": "500"
+    },
+    {
+        "title": "Mumbai",
+        "description": "If you are tired from usual trips just don't wait and go to Mumbai!",
+        "direction": ["SouthEast"],
+
+        "previewImgSrc": "preview3.png",
+        "imgSrc": "3.png",
+
+        "price": "600"
+    },
+    {
+        "title": "Sydney",
+
+        "description": "If you want to study surfing you need to go there!",
+        "direction": ["SouthWest"],
+
+        "previewImgSrc": "preview4.png",
+        "imgSrc": "4.png",
+
+        "price": "650"
+    },
+    {
+        "title": "Hawaii",
+        "description": "If you want to see the another side of our world you should to go there!",
+        "direction": ["SouthWest"],
+
+        "previewImgSrc": "preview5.png",
+        "imgSrc": "5.png",
+
+        "price": "700"
+    },
+    {
+        "title": "Tokyo",
+        "description": "If you are true fan of anime and Japan cars you must to visit this country!",
+        "direction": ["NorthEast"],
+
+        "previewImgSrc": "preview6.png",
+        "imgSrc": "6.png",
+
+        "price": "500"
+    }
+]
